@@ -1,0 +1,95 @@
+@mixin accented-text($font-size: 16px, $line-height: 20px) {
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-transform: uppercase;
+}
+
+@mixin main-text($font-size: 14px, $line-height: 18px) {
+  font-family: $lato;
+  font-style: normal;
+  font-weight: 400;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color-special;
+}
+
+
+@mixin form-text($color: #444444) {
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $color;
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@mixin decorative-line {
+  display: inline-block;
+  padding-left: 20px;
+  padding-right: 23px;
+  margin-left: -20px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background-color: $color-accent;
+    box-shadow: 100vw 0 $color-accent;
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: -40px;
+  }
+}
+
+@mixin input-basic {
+  outline: 1px solid #e7e7e7;
+
+  &:hover {
+    outline-color: #cdcdcd;
+  }
+
+  &:focus {
+    outline: 2px solid $color-special;
+  }
+
+  &--error {
+    outline: 2px solid $color-error;
+  }
+}
+
+@mixin status-primary {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+    outline: none;
+  }
+}

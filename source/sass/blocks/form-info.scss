@@ -1,0 +1,34 @@
+.form-info__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+  }
+}
+
+.form-info__item {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+}
+
+.form-info__label {
+  @include form-text;
+  flex-shrink: 0;
+}
+
+.form-info__input {
+  @include form-text;
+  @include input-basic;
+  line-height: 24px;
+  padding: 11px 20px 8px 20px;
+  width: 100%;
+  flex-grow: 1;
+
+  @media (min-width: $tablet-width) {
+    padding: 11px 20px 11px 20px;
+  }
+}
+

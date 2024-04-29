@@ -1,0 +1,35 @@
+.program-selection {
+  padding: 27px 0 32px;
+
+  @media (min-width: $tablet-width) {
+    padding: 64px 0 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 74px 0 82px;
+  }
+}
+
+.program-selection__title {
+  margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
+}
+
+.program-selection__desc {
+  @include accented-text(14px, 18px);
+  color: $color-basic;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
+}

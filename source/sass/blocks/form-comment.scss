@@ -1,0 +1,21 @@
+.form-comment__title {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 77px;
+  }
+}
+
+.form-comment__textarea {
+  @include form-text;
+  @include input-basic;
+  width: 100%;
+  min-height: 150px;
+  padding: 9px 12px 9px 15px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    min-height: 172px;
+    padding: 10px 19px;
+  }
+}

@@ -1,0 +1,32 @@
+.product-detail {
+  @include main-text(12px, 16px);
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.product-detail__item {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #cdcdcd;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 10px;
+  }
+}
+
+.product-detail__value {
+  text-align: right;
+}

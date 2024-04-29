@@ -1,0 +1,136 @@
+.form__info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 72px;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+    margin-bottom: 69px;
+  }
+}
+
+.form__title {
+  @include decorative-line;
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: $color-basic;
+  background-color: $color-basic-light;
+
+  &--contacts {
+    width: 200px;
+    padding-right: 0;
+
+    @media (min-width: 550px) {
+      width: auto;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-right: 40px;
+  }
+}
+
+.form__info {
+  flex-basis: 100%;
+
+  @media (min-width: $desktop-width) {
+    flex: 0 0 calc((100% / 2) - 40px);
+  }
+}
+
+.form__goal {
+  @media (max-width: $mobile-width-only) {
+    width: calc(100% + 40px);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 -20px;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex: 0 0 calc((100% / 2) - 40px);
+  }
+}
+
+.form__contacts {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 67px;
+  }
+}
+
+.form__comment {
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 64px;
+  }
+}
+
+.form__add {
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 61px;
+  }
+}
+
+.form__button {
+  margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 45%;
+    padding: 16px;
+    margin: 0 63px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 46.5%;
+    margin-right: 84px;
+  }
+}
+
+.form__warning {
+  @include main-text(14px, 16px);
+  color: $color-basic;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    display: inline-block;
+    vertical-align: 35%;
+  }
+}
